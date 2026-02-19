@@ -17,17 +17,15 @@ export const PositionList = () => {
                 : error? 
                     <h4>Error al cargar las posiciones: {error}</h4> 
                     : 
-                        <div className="list">
-                        {data?.map((position) => {  
-                            return (
-                                <ul className="item" key={position.id}>
-                                    <li id="title">Título: {position.title}</li>
-                                    <li><input type="text" placeholder="Repositorio GitHub" /></li>
-                                    <li><button>Submit</button></li>
-                                </ul>
-                            )
-                        })}
-                        </div>
+                        <ul className="list">
+                            {data?.map(position => (
+                                <li className="item" key={position.id}>
+                                    <h3 id="title">Título: {position.title}</h3>
+                                    <input type="text" placeholder="Repositorio GitHub" />
+                                    <button>Submit</button>
+                                </li>
+                            ))}
+                        </ul>
             }   
         </>
     )
