@@ -22,6 +22,7 @@ export const PositionList = () => {
     
     return (
         <>
+            <h1>Postulación para Nimble Gravity</h1>
             <h2>Listado de Posiciones</h2>
             <ul className="list">
                 {positions?.map((position) => (  
@@ -35,4 +36,3 @@ export const PositionList = () => {
         </>
     )
 }
-
