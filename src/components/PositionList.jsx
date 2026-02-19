@@ -1,17 +1,20 @@
 import { useState } from "react"
-import { useFetch } from "../useFetch"
+import { useFetch } from "../hooks/useFetch"
 import '../PositionList.css'
 
 export const PositionList = () => {
     const URL_BASE = 'https://botfilter-h5ddh6dye8exb7ha.centralus-01.azurewebsites.net'
 
+    /* OBTENER DATOS DEL CANDIDATO */
     const { data: candidateData, error: candidateError } = useFetch(URL_BASE + '/api/candidate/get-by-email?email=javi_14_228@hotmail.com')
     const uuid = candidateData?.uuid
     const candidateId = candidateData?.candidateId
     const applicationId = candidateData?.applicationId
-    
+
+    /* OBTENER LISTA DE POSICIONES DISPONIBLES */
     const { data, isLoading, error} = useFetch(URL_BASE + '/api/jobs/get-list')
 
+    /* MANEJO DEL FORMULARIO */
     const [repoUrls, setRepoUrls] = useState('')
 
     const handleInputChange = (positionId, e) => {
