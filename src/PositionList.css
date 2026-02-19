@@ -1,0 +1,50 @@
+ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    width: 978px;
+}
+
+.item {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #2E1A47;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#title {
+    font-weight: bold;
+    width: 200px;
+}
+
+input[type="text"] {
+    width: 400px;
+    border: 1px solid #2E1A47;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+button {
+    border: none;
+    background-color: #390c6e;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #2E1A47;
+    color: #fff;
+}
