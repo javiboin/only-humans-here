@@ -3,7 +3,6 @@
 }
 
 html {
-    height: 100%;
     background: rgb(207,56,19);
     background: linear-gradient(4deg, rgba(177,39,5,1) 1%, rgba(64,108,146,1) 43%, rgba(52,102,134,1) 75%, rgba(8,32,99,1) 95%);
 }
